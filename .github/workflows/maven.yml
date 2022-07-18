@@ -2,9 +2,9 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ main,  workflow-trigger]
+    branches: [ main,  trigger-workflow]
   pull_request:
-    branches: [ main,  workflow-trigger]
+    branches: [ main,  trigger-workflow]
 
 jobs:
   build-and-test:
