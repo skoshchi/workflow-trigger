@@ -1,5 +1,4 @@
 wildfly:
-  fullWorkflowReport: on
   rules:
     - title: "test"
     - body: "test"
