@@ -1,8 +1,8 @@
 wildfly:
+  fullWorkflowReport: on
   rules:
     - title: "test"
     - body: "test"
-      fullWorkflowReport: on
       notify: [xstefank,petrberan]
   format:
     title-check:
