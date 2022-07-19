@@ -9,7 +9,7 @@ on:
 jobs:
   build-and-test:
     name: JDK ${{matrix.java-version}} JVM build and tests
-    timeout-minutes: 120
+    timeout-minutes: 110
     strategy:
       fail-fast: false
       matrix:
