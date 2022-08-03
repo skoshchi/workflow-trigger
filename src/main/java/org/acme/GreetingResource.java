@@ -12,5 +12,5 @@ public class GreetingResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
         //ddddssss
-        return "Hello
+        return "Helloss
 }
