@@ -33,7 +33,7 @@ jobs:
       with:
         name: "build-reports-JVM Tests - JDK ${{matrix.java.name}}"
         path: |
-          build-report.json
+          test/build-report.json
         retention-days: 2
 
       
