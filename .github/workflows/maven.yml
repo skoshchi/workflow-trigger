@@ -30,7 +30,6 @@ jobs:
       
     - name: Upload build reports (if build failed)
       uses: actions/upload-artifact@v3
-      if: ${{ failure() || cancelled() }}
       with:
         name: "build-reports-JVM Tests - JDK ${{matrix.java.name}}"
         path: |
