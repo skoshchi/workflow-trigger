@@ -28,12 +28,14 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
       
-    - name: Archive production artifacts
+    - name: Upload build reports (if build failed)
       uses: actions/upload-artifact@v3
+      if: ${{ failure() || cancelled() }}
       with:
-        name: build-logs
+        name: "build-reports-JVM Tests - JDK ${{matrix.java.name}}"
         path: |
-          **/build.log
+          **/target/*-reports/TEST-*.xml
+          target/build-report.json
         retention-days: 2
 
       
