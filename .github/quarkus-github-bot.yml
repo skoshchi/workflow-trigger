@@ -5,3 +5,4 @@
 features: [ALL]
 triage:
 workflowRunAnalysis:
+  workflows: ["Java CI with Maven"]
