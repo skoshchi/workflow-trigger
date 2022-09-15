@@ -27,3 +27,19 @@ jobs:
 
     - name: Build with Maven
       run: mvn clean install
+      
+  attach-pr-number:
+    runs-on: ubuntu-latest
+    name: Attach pull request number
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Create file
+        shell: bash
+        run: |
+          echo -n ${{ github.event.number }} > pull-request-number
+      - name: Upload pull request number
+        uses: actions/upload-artifact@v3
+        with:
+          name: pull-request-number-${{ github.event.number }}
+          path: pull-request-number
+          retention-days: 1
