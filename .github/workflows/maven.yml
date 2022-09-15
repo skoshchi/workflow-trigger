@@ -30,10 +30,12 @@ jobs:
       
     - name: Upload build reports (if build failed)
       uses: actions/upload-artifact@v3
+      if: ${{ failure() || cancelled() }}
       with:
-        name: "build-reports-JVM Tests - JDK ${{matrix.java.name}}"
+        name: "build-reports-Initial JDK 11 Build"
         path: |
-          test/build-report.json
+          target/build-report.json
+          LICENSE.txt
         retention-days: 2
 
       
