@@ -11,6 +11,7 @@ public class GreetingResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
+        //ddddssss
         return "Hello from RESTEasy Reactive";
-    }
+        it is dead or not? do it
 }
