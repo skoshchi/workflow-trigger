@@ -31,8 +31,11 @@ jobs:
     - name: Upload build reports (if build failed)
       uses: actions/upload-artifact@v3
       with:
-        name: my-artifact
-        path: target/
+        name: "build-reports"
+        path: target/build-report.json
+        retention-days: 2
+        
+
 
       
   
