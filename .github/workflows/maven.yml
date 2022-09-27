@@ -29,11 +29,14 @@ jobs:
       run: mvn clean install
     
     - name: Upload build reports (if build failed)
-      uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v3
       with:
         name: "build-reports"
         path: target/build-report.json
         retention-days: 2
+        
+        
+      
         
 
 
